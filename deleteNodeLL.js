@@ -15,6 +15,16 @@ It is guaranteed that the node to be deleted is not a tail node in the list.
  * @param {ListNode} node
  * @return {void} Do not return anything, modify node in-place instead.
  */
- var deleteNode = function(node) {
-    
+// For deleteNode function, the node is given directly.
+// In Singly Linked List, each node has a next attribute for the next node in the Linked List.
+// We must remove all references/pointers to this node to have it removed from garbage collection
+// we must also ensure that the Linked List does not lose ordering once we remove the Node.
+
+
+
+var deleteNode = function(node) {
+	tempNode = node.next;
+    nextNode = tempNode.next // node.next.next
+    node.val = tempNode.val // take the value of the old node.next
+	node.next = nextNode // node.next.next old value becomes node.next
 };
