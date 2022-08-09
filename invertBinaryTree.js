@@ -53,6 +53,7 @@ Output: []
 
     invertTree(root.left); // O(n / 2)
     invertTree(root.right); // O(n / 2)
+    return root;
 };
 
 // Time Complexity: O(n) we have to visit n number of nodes
