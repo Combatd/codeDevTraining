@@ -55,7 +55,7 @@ Output: -1
             } else {
                 right = midPoint - 1;
             }
-        } else { // it is greater than the right side
+        } else { // it is greater than the right side which probably has the smaller
             if (target < nums[midPoint] || target > nums[right]) {
                 right = midPoint - 1;
             } else {
